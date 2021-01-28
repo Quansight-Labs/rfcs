@@ -46,7 +46,7 @@ PyTorch implements the *Tensor* object as the basic structure of
 storing data in a multi-dimensional array structure that can be
 processed on various computational devices such as GPUs as well as
 multicore CPUs efficiently by taking advantage of parallelism that
-these devices support. PyTorch has advanged in developing
+these devices support. PyTorch has advanced in developing
 computational tools for various ML and AI algorithms that can be
 applied to so-called dense or strided tensors. However, the
 developement of tools applicable to sparse tensors has not passed the
@@ -119,7 +119,7 @@ space of data values.  Mathematically, arrays can be interpreted as
 vectors, matrices, or tensors that form algebras with various algebra
 operations as well as functions on algebra elements.
 
-When representing data as an array in computer memory, a array storage
+When representing data as an array in computer memory, an array storage
 format must be selected. The simplest and most general array storage
 format is the strided array format where the data values are stored
 continuously in memory so that the storage location any array element
@@ -227,7 +227,7 @@ array cases.
 
 Contiguous arrays are strided arrays that values are stored linearly
 in memory with no caps, that is, the span of memory for storing all
-values of a contiguous array has a lenght equal to the number of all
+values of a contiguous array has a length equal to the number of all
 array elements (multiplied by the storage size of a single element).
 
 Given the dimensionality 
@@ -365,7 +365,7 @@ is reduced to
 <img data-latex="$1$" src=".images/39a02353ea65bee09e817d2af7362f2b.svg"  width="12.193px" height="11.097px" style="display:inline;" alt="latex">
 by relating the indices of a 
 <img data-latex="$N$" src=".images/eac9fa71715f08df45c75d17adab2305.svg"  width="19.594px" height="11.764px" style="display:inline;" alt="latex">-dimensional
-array to a memory address of element storage location. Let use denote the linear array representing the memory by 
+array to a memory address of element storage location. Let us denote the linear array representing the memory by 
 <img data-latex="$M$" src=".images/6e6f00098ba14a79c1d939d351e3410c.svg"  width="22.404px" height="11.764px" style="display:inline;" alt="latex">,
 then we have
 
@@ -785,7 +785,7 @@ A = COO(indices, values, shape)
 where `indices` and `values` are strided arrays satisfying the
 constraints defined above.
 
-PyTorch supports uncoalesced sparse arrays that means there may exists
+PyTorch supports uncoalesced sparse arrays that means there may exist
 columns of `indices` that are equal, that is, the equation
 ```python
 A.indices[:, n] == Is
@@ -837,7 +837,7 @@ When the equation `A.indices[:, n] == Is` does not have a solution then
 the corresponding array element is classified as unspecified
 element. The unspecified elements can have many interpretations. In
 most cases these are considered as elements with zero values but other
-interpetations exists as well. For instance, for sparse softmax
+interpetations exist as well. For instance, for sparse softmax
 operation the unspecified elements are interpreted as negative
 infinities. In the cases of using sparse arrays to represent graphs,
 the interpretation of unspecified elements is none.
